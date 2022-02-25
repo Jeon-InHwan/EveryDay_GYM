@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.scit.gym.dao.Freeboard_ReplyMapper">
+
+
+<!-- 자유게시판 댓글 작성 (insert) -->
+<insert id="insertReply" parameterType="Freeboard_Reply">
+INSERT INTO FREEBOARD_REPLY(
+	freeboard_replynum
+	, freeboard_num
+	, user_id
+	, freeboard_replytext
+)VALUES(
+	FREEBOARD_REPLY_SEQ.NEXTVAL
+	, #{freeboard_num}
+	, #{user_id}
+	, #{freeboard_replytext}
+)
+</insert>
+
+
+<!-- 자유게시판 모든 댓글 가져오기 (SELECT) -->
+<select id="selectAllReply" parameterType="int" resultType="Freeboard_Reply">
+SELECT
+	freeboard_replynum
+	, freeboard_num
+	, user_id
+	, freeboard_replytext
+	, TO_CHAR(freeboard_reply_indate, 'YYYY/MM/DD HH24:MI') AS freeboard_reply_indate
+FROM 
+	FREEBOARD_REPLY
+WHERE
+	freeboard_num = #{freeboard_num}
+ORDER BY
+	freeboard_replynum DESC
+</select>
+
+
+<!-- freeboard_replynum을 토대로 자유게시판 댓글 하나 수정하기 (SELECT) -->
+<update id="updateReply" parameterType="Freeboard_Reply">
+UPDATE
+	FREEBOARD_REPLY
+SET
+	freeboard_replytext = #{freeboard_replytext}
+	, freeboard_reply_indate = SYSDATE
+WHERE
+	freeboard_replynum = #{freeboard_replynum}
+AND
+	(user_id = #{user_id} OR #{manager} = 1)
+</update>
+
+
+<!-- freeboard_replynum을 토대로 자유게시판 댓글 하나 삭제하기 (DELETE) -->
+<update id="deleteReply" parameterType="Freeboard_Reply">
+DELETE FROM
+	FREEBOARD_REPLY
+WHERE
+	freeboard_replynum = #{freeboard_replynum}
+AND
+	(user_id = #{user_id} OR #{manager} = 1)
+</update>
+
+
+
+
+
+
+
+
+</mapper>

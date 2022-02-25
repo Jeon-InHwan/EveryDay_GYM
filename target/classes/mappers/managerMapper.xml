@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.scit.gym.dao.ManagerMapper">
+
+
+<!-- 모든 회원권 신청을 가져오기 -->
+<select id="listAllRequests" resultType="Membership">
+SELECT
+	membership_num
+	, membership_month
+	, user_id
+	, membership_processed
+FROM
+	EVERYDAYGYM_MEMBERSHIP
+WHERE
+	<choose>
+		<when test="searchItem == 3">membership_processed LIKE '%' || '' || '%'</when>
+		<when test="searchItem == 0">membership_processed = 0</when>
+		<when test="searchItem == 1">membership_processed = 1</when>
+	</choose>
+AND
+	user_id LIKE '%' || #{searchWord} || '%'
+ORDER BY membership_num DESC
+</select>
+
+
+<!-- 회원권 신청 내용을 바탕으로, Member 테이블의 만료일 갱신 (Ajax) -->
+<update id="updateExpiredate" parameterType="Member">
+UPDATE
+	EVERYDAYGYM_MEMBER
+SET
+	expiredate = TO_DATE(#{expiredate}, 'YYYY-MM-DD')
+WHERE
+	user_id = #{user_id}
+</update>
+
+
+<!-- Membership 테이블의 membership_processed 1로 업데이트 -->
+<update id="updateProcessed" parameterType="int">
+UPDATE
+	EVERYDAYGYM_MEMBERSHIP
+SET
+	membership_processed = 1
+WHERE
+	membership_num = #{membership_num}
+</update>
+
+
+
+<!-- 전체 회원권 Request 개수 세어오기 -->
+<select id="selectTotalCount" resultType="int" parameterType="map">
+SELECT
+	COUNT(*)
+FROM
+	EVERYDAYGYM_MEMBERSHIP
+WHERE
+	<choose>
+		<when test="searchItem == 3">membership_processed LIKE '%' || '' || '%'</when>
+		<when test="searchItem == 0">membership_processed = 0</when>
+		<when test="searchItem == 1">membership_processed = 1</when>
+	</choose>
+AND
+	user_id LIKE '%' || #{searchWord} || '%'
+</select>
+
+
+<!-- 모든 회원 정보 가져오기 -->
+<select id="listMember" resultType="Member">
+SELECT
+	user_id
+	, user_pwd
+	, user_nm
+	, user_phone
+	, TO_CHAR(regdate, 'YYYY-MM-DD') AS regdate
+	, TO_CHAR(expiredate, 'YYYY-MM-DD') AS expiredate
+	, gender
+	, manager 
+FROM 
+	everydaygym_member
+WHERE
+<choose>
+		<when test="searchItem == 'user_id'">user_id</when>
+		<when test="searchItem == 'user_nm'">user_nm</when>
+	</choose>
+LIKE '%' || #{searchWord} || '%'
+AND	
+	manager = 0
+</select>
+
+
+
+<!-- 회원 삭제 요청 (Ajax 요청) -->
+<delete id="deleteMember" parameterType="string">
+DELETE FROM
+	everydaygym_member
+WHERE
+	user_id = #{user_id}
+</delete>
+
+
+<!-- 전체 회원 수 세어오기 -->
+<select id="totalMemberCount" resultType="int" parameterType="map">
+SELECT
+	COUNT(*)
+FROM
+	EVERYDAYGYM_MEMBER
+WHERE
+	<choose>
+		<when test="searchItem == 'user_id'">user_id</when>
+		<when test="searchItem == 'user_nm'">user_nm</when>
+	</choose>
+LIKE '%' || #{searchWord} || '%'
+AND 
+	manager = 0
+</select>
+
+
+</mapper>

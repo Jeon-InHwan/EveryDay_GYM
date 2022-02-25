@@ -1,0 +1,15 @@
+
+
+CREATE TABLE EVERYDAYGYM_FREEBOARD(
+    freeboard_num NUMBER PRIMARY KEY
+    , freeboard_title VARCHAR2(60) NOT NULL
+    , freeboard_context VARCHAR2(2000) NOT NULL
+    , freeboard_hits NUMBER DEFAULT 0
+    , user_id VARCHAR2(50) NOT NULL CONSTRAINT FREEBOARD_FK REFERENCES EVERYDAYGYM_MEMBER(user_id) ON DELETE CASCADE
+    , freeboard_savedfile VARCHAR2(500)
+    , freeboard_originalfile VARCHAR2(500)
+    , freeboard_indate DATE DEFAULT SYSDATE
+);
+
+CREATE SEQUENCE EVERYDAYGYM_FREEBOARD_SEQ;
+    

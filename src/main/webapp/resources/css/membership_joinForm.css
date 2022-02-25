@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+* {
+	font-family: "M PLUS Rounded 1c"; 
+}
+
+
+#outWrapper {
+	width: 500px;
+	margin: 0 auto;
+	opacity: 1;
+	text-align: center;
+	margin-top: 150px;
+	vertical-align: middle;
+}
+
+#dropdownId {
+	display: inline;
+	float: right;
+}
+
+div#picture {
+	opacity: 0.8;
+  	display: block;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	height: 100vh;
+	width : 100vw;;
+	background-image: url("/resources/images/home_workout1.jpg");
+	background-size:cover;
+	z-index: -1;
+}
+
+
+li#firstLi {
+	margin-left: 70px;
+}
+
+li {
+	margin-left: 30px;
+}
+
+
+#firstUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#firstUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+#fourthUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#fourthUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+/* 로그인된 유저 표시 css 시작 부분 */
+
+#userUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#userUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+/* 로그인된 유저 표시 css 종료 부분 */
+
+#tableWrapper {
+	margin-bottom: 50px;
+	margin: 0 auto;
+	width: 800px;
+}
+
+
+#membershipJoinTable1 {
+	background-color: white;
+	width: 800px;
+	margin-top: 80px;
+	
+}
+
+#membershipJoinTable2 {
+	background-color: white;
+	width: 800px;
+	margin-top: 80px;
+	
+}
+
+#membershipJoinTable1 th, td {
+	font-weight: 700;
+	text-align: center;
+	
+}
+
+#membershipJoinTable2 th, td {
+	font-weight: 700;
+	text-align: center;
+	
+}
+
+
+/* modal 부분 CSS 시작 */
+
+#modalTrigger {
+	display: none;
+}
+
+#exampleModalLabel {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+#forTitleColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleUpperColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#staticBackdrop {
+	margin: 0px;
+}
+
+#innerContent1 {
+	color: white;
+	font-weight: 700;
+	width: 798px;
+	text-align: center;
+}
+
+
+
+

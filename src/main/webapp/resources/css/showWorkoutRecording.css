@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+* {
+	font-family: "M PLUS Rounded 1c"; 
+}
+
+
+#outWrapper {
+	width: 500px;
+	margin: 0 auto;
+	opacity: 1;
+	text-align: center;
+	margin-top: 150px;
+	vertical-align: middle;
+}
+
+#dropdownId {
+	display: inline;
+	float: right;
+}
+
+div#picture {
+	opacity: 0.8;
+  	display: block;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	height: 100vh;
+	width : 100vw;;
+	background-image: url("/resources/images/home_workout1.jpg");
+	background-size:cover;
+	z-index: -1;
+}
+
+
+/* navbar css 부분 시작 */
+
+li#firstLi {
+	margin-left: 70px;
+}
+
+li {
+	margin-left: 30px;
+}
+
+
+#firstUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#firstUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+#fourthUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#fourthUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+/* navbar css 부분 끝 */
+
+
+/* 로그인된 유저 표시 css 시작 부분 */
+
+#userUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#userUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+/* 로그인된 유저 표시 css 종료 부분 */
+
+
+
+#contentWrapper {
+	margin-top: 70px;
+	margin-bottom: 20px;
+}
+
+div#workoutTableDiv {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#workoutTable {
+	width: 1000px;
+}
+
+#workoutTable tr, th, td {
+	text-align: center;
+}
+
+#totalVolumePerTypeDiv {
+	width: 1000px;
+	margin: 0 auto;
+	color: white;
+	font-weight: 700;
+	
+}
+
+.hidden_td {
+	display: none;
+}
+
+
+div#buttonDiv {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#searchDiv {
+	width: 800px;
+	margin-top: 70px;
+}
+
+#searchForm {
+	width: 800px;
+}
+
+
+
+#workout_type_select {
+	width: 130px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-family: "M PLUS Rounded 1c";
+	text-align-last: center;
+	display: inline-block;
+	height: 31px;
+}
+
+#pagenationNaV .pagination {
+	margin: 0 auto; 
+	margin-top: 5px;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+
+#pagenationNaV .pagination li {
+	margin: 0px;
+}
+
+

@@ -1,0 +1,491 @@
+@charset "UTF-8";
+
+* {
+	font-family: "M PLUS Rounded 1c"; 
+}
+
+
+
+#outWrapper {
+	width: 500px;
+	margin: 0 auto;
+	opacity: 1;
+	text-align: center;
+	margin-top: 150px;
+	vertical-align: middle;
+}
+
+#dropdownId {
+	display: inline;
+	float: right;
+}
+
+div#picture {
+	opacity: 0.8;
+  	display: block;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	height: 100vh;
+	width : 100vw;;
+	background-image: url("/resources/images/home_workout1.jpg");
+	background-size:cover;
+	z-index: -1;
+}
+
+
+div#tableDiv {
+	width: 1000px;
+	margin-top: 10px;
+}
+
+div#tableWrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#freeBoardTable {
+	width: 1000px;
+}
+
+
+#freeBoardTable tr, th, td {
+	text-align: center;
+	column-width: 100%;
+	vertical-align: middle;
+}
+
+div#buttonDiv {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+div#buttonDiv input {
+	margin-top: 15px;
+}
+
+.hidden_td {
+	display: none;
+}
+
+#modalTrigger {
+	display: none;
+}
+
+
+#exampleModalLabel {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+#exampleModalToggleLabel2 {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+#exampleModalToggleLabel3 {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+#exampleModalToggleLabel4 {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+#exampleModalToggleLabel5 {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+
+#forTitleColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleColor2 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleColor3 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleColor4 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleColor5 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleUpperColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleUpperColor2 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleUpperColor3 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleUpperColor4 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleUpperColor5 {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#staticBackdrop {
+	margin: 0px;
+}
+
+#exampleModalToggle2 {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#exampleModalToggle3 {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#exampleModalToggle4 {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#exampleModalToggle5 {
+	width: 80%;
+	margin-left: 10%;
+}
+
+#forDeleteBody {
+	color: white;
+	font-weight: 800; 
+}
+
+#innerContent1 {
+	color: white;
+	font-weight: 700;
+	width: 798px;
+	height: 180px;
+}
+
+#innerContent2 {
+	color: white;
+	font-weight: 600;
+	text-align: right;
+	width: 798px;
+	height: 60px;
+	padding: 8px;
+}
+
+#innerContent3 {
+	display: none;
+	width: 798px;
+}
+
+#innerContent4 {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	padding: 0px;
+	width: 798px;
+	margin: 0px;
+}
+
+
+
+
+
+#indateAndHits {
+	float: right;
+	margin-top: 35px;
+}
+
+#hits {
+	display: inline-block;
+}
+
+
+/* navbar css 부분 시작 */
+
+li#firstLi {
+	margin-left: 70px;
+}
+
+li {
+	margin-left: 30px;
+}
+
+
+#firstUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#firstUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+#fourthUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#fourthUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+/* navbar css 부분 종료 */
+
+
+#userUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#userUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#modal_updateButton {
+	display: none;
+}
+
+
+#modal_updateWrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#modal_writeReplyWrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#modal_updateReplyWrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#modal_updateDiv {
+	width: 100%;
+	margin-top: 25px;
+}
+
+#modal_updateReplyDiv {
+	width: 100%;
+	margin-top: 25px;
+}
+
+
+#modal_writeReplyDiv {
+	width: 100%;
+	margin-top: 25px;
+}
+
+#modal_updateReplyDiv {
+	width: 100%;
+	margin-top: 25px;
+}
+
+
+#update_context {
+	height: 130px;
+	padding : 6px 12px;
+}
+
+#freeboard_replytext {
+	height: 130px;
+	padding : 6px 12px;
+}
+
+#freeboard_replytext_update {
+	height: 130px;
+	padding : 6px 12px;
+}
+
+#updateId {
+	text-align: left;
+}
+
+#writeReplyId {
+	text-align: left;
+}
+
+#updateReplyId {
+	text-align: left;
+}
+
+
+
+#update_context::placeholder {
+  color: #6C757D;
+  margin: 0;
+}
+
+#context {
+	font-family: "M PLUS Rounded 1c";
+	font-size: 16px;
+	overflow: auto;
+	white-space: pre-wrap;
+}
+
+#replyTable th {
+	text-align: center;
+}
+
+#writeReplyTableIdTh {
+	text-align: center;
+}
+
+#updateReplyTableIdTh {
+	text-align: center;
+}
+
+#writeReplyTableContentTh {
+	text-align: center;
+}
+
+#updateReplyTableContentTh {
+	text-align: center;
+}
+
+
+#replyTable {
+	width: 768px;
+	margin: 0 auto;
+	
+}
+
+
+#replyWrapper {
+	width: 768px;
+	margin: 0 auto;
+	padding: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#replyDiv {
+	width: 768px;
+}
+
+.eachReplytext {
+	font-family: "M PLUS Rounded 1c";
+	font-size: 16px;
+	width: auto;
+	overflow: auto;
+	white-space: pre-wrap;
+	text-align: left;
+	margin-left: 15px;
+}
+
+#hiddenButtonForToggle5 {
+	display: none;
+}
+
+
+.eachReplytext {
+	margin: 0 auto;
+}
+
+
+#informationForDeleteAndUpdateReply {
+	font-size: 0.8em;
+	font-weight: 500;
+	text-align: center;
+}
+
+#informationDiv {
+	float: right;
+	margin-right: 10px;
+}
+
+
+#pagenationNaV .pagination {
+	margin: 0 auto; 
+	margin-top: 25px;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+
+#pagenationNaV .pagination li {
+	margin: 0px;
+}
+
+
+#searchItem {
+	width: 110px;
+	margin-top: 10px;
+	font-family: "M PLUS Rounded 1c";
+	text-align-last: center;
+	display: inline-block;
+}
+
+#searchDiv {
+	width: 500px;
+	margin-top: 70px;
+}
+
+
+#hilightCurrent {
+	font-weight: 900;
+}
+
+
+#preTd {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+

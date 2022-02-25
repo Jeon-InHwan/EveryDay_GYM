@@ -1,0 +1,590 @@
+@charset "UTF-8";
+
+* {
+	font-family: "M PLUS Rounded 1c"; 
+}
+
+
+#outWrapper {
+	width: 500px;
+	margin: 0 auto;
+	opacity: 1;
+	text-align: center;
+	margin-top: 150px;
+	vertical-align: middle;
+}
+
+#dropdownId {
+	display: inline;
+	float: right;
+}
+
+div#picture {
+	opacity: 0.8;
+  	display: block;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	height: 100vh;
+	width : 100vw;;
+	background-image: url("/resources/images/home_workout1.jpg");
+	background-size:cover;
+	z-index: -1;
+}
+
+
+/* 카드 관련 css 시작 부분 */
+
+#cardWrapper1 {
+	text-align: center;
+	padding: 0;
+	margin-top: 110px;
+	margin-bottom: 50px;
+}
+
+#cardWrapper2 {
+	text-align: center;
+	padding: 0;
+	margin-top: 45px;
+	margin-bottom: 50px;
+}
+
+#card1 {
+	width: 250px;
+	height: 320px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+#card2 {
+	width: 250px;
+	height: 320px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#card3 {
+	width: 250px;
+	height: 320px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-left: 30px;
+}
+
+#card4 {
+	width: 250px;
+	height: 320px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+#card5 {
+	width: 250px;
+	height: 320px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#card6 {
+	width: 250px;
+	height: 320px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-left: 30px
+}
+
+
+#card1 .card-body a {
+	margin-top: 15px;
+	width: 210px;
+	font-weight: 600;
+}
+
+#card2 .card-body a {
+	margin-top: 15px;
+	width: 210px;
+	font-weight: 600;
+}
+
+#card3 .card-body a {
+	margin-top: 15px;
+	width: 210px;
+	font-weight: 600;
+}
+
+#card4 .card-body a {
+	margin-top: 15px;
+	width: 210px;
+	font-weight: 600;
+}
+
+#card5 .card-body a {
+	margin-top: 15px;
+	width: 210px;
+	font-weight: 600;
+}
+
+#card6 .card-body a {
+	margin-top: 15px;
+	width: 210px;
+	font-weight: 600;
+}
+
+
+#card1 img {
+	width: 284px;
+	height: 190px;
+}
+
+#card2 img {
+	width: 284px;
+	height: 190px;
+}
+
+#card3 img {
+	width: 284px;
+	height: 190px;
+}
+
+#card4 img {
+	width: 284px;
+	height: 190px;
+}
+
+#card5 img {
+	width: 284px;
+	height: 190px;
+}
+
+#card6 img {
+	width: 284px;
+	height: 190px;
+}
+
+
+/* 카드 관련 css 종료 부분 */
+
+
+
+li#firstLi {
+	margin-left: 70px;
+}
+
+li {
+	margin-left: 30px;
+}
+
+
+#firstUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#firstUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+#fourthUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#fourthUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+/* 로그인된 유저 표시 css 시작 부분 */
+
+#userUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#userUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+/* 로그인된 유저 표시 css 종료 부분 */
+
+
+/* !!! Modal css 시작 부분 !!! */
+
+
+/* BenchPress Modal 시작 */
+#modalTrigger1 {
+	display: none;
+}
+
+
+#staticBackdrop1 {
+	margin: 0px;
+}
+
+#forTitleUpperColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#exampleModalLabel {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+
+#recordInput {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#recordInput label {
+	color: white;
+	font-weight: 700;
+	margin-right: 7px;
+	width: 65px;
+}
+
+#recordInput span {
+	color: white;
+	font-weight: 700;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#labelForKg {
+	padding-left: 11px; 
+}
+
+#recordInputButton {
+	display: inline-block;
+	margin-left: 25px;
+}
+
+#innerContent1 {
+	overflow: hidden; 
+	height: 250px;
+}
+
+
+#innerContent2 {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	padding: 0px;
+	width: 798px;
+	margin: 0px;
+}
+
+
+#workoutTable {
+	width: 768px;
+	margin: 0 auto;
+	
+}
+
+
+#workoutWrapper {
+	width: 768px;
+	margin: 0 auto;
+	padding: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#workoutDiv {
+	width: 768px;
+}
+
+
+#TotalVolumeDiv {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	display: inline;
+	float: right;
+	display: none;
+}
+
+#TotalSetsDiv {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	display: inline;
+	float: right;
+	display: none;
+}
+
+/* BenchPress Modal 끝 */
+
+
+/* DeadLift Modal 시작 */
+
+#modalTrigger_deadlift {
+	display: none;
+}
+
+
+#staticBackdrop_deadlift {
+	margin: 0px;
+}
+
+#forTitleUpperColor_deadlift {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleColor_deadlift {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#exampleModalLabel_deadlift {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+
+#recordInput_deadlift {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#recordInput_deadlift label {
+	color: white;
+	font-weight: 700;
+	margin-right: 7px;
+	width: 65px;
+}
+
+#recordInput_deadlift span {
+	color: white;
+	font-weight: 700;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#labelForKg_deadlift {
+	padding-left: 11px; 
+}
+
+#recordInputButton_deadlift {
+	display: inline-block;
+	margin-left: 25px;
+}
+
+#innerContent3 {
+	overflow: hidden; 
+	height: 250px;
+}
+
+
+#innerContent4 {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	padding: 0px;
+	width: 798px;
+	margin: 0px;
+}
+
+
+#workoutTable_deadlift {
+	width: 768px;
+	margin: 0 auto;
+	
+}
+
+
+#workoutWrapper_deadlift {
+	width: 768px;
+	margin: 0 auto;
+	padding: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#workoutDiv_deadlift {
+	width: 768px;
+}
+
+
+#TotalVolumeDiv_deadlift {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	display: inline;
+	float: right;
+	display: none;
+}
+
+#TotalSetsDiv_deadlift {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	display: inline;
+	float: right;
+	display: none;
+}
+
+/* DeadLift Modal 끝 */
+
+
+/* Squat Modal 시작 */
+
+#modalTrigger_squat {
+	display: none;
+}
+
+
+#staticBackdrop_squat {
+	margin: 0px;
+}
+
+#forTitleUpperColor_squat {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleColor_squat {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#exampleModalLabel_squat {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+
+#recordInput_squat {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#recordInput_squat label {
+	color: white;
+	font-weight: 700;
+	margin-right: 7px;
+	width: 65px;
+}
+
+#recordInput_squat span {
+	color: white;
+	font-weight: 700;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#labelForKg_squat {
+	padding-left: 11px; 
+}
+
+#recordInputButton_squat {
+	display: inline-block;
+	margin-left: 25px;
+}
+
+#innerContent5 {
+	overflow: hidden; 
+	height: 250px;
+}
+
+
+#innerContent6 {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	padding: 0px;
+	width: 798px;
+	margin: 0px;
+}
+
+
+#workoutTable_squat {
+	width: 768px;
+	margin: 0 auto;
+	
+}
+
+
+#workoutWrapper_squat {
+	width: 768px;
+	margin: 0 auto;
+	padding: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#workoutDiv_squat {
+	width: 768px;
+}
+
+
+#TotalVolumeDiv_squat {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	display: inline;
+	float: right;
+	display: none;
+}
+
+#TotalSetsDiv_squat {
+	color: white;
+	font-weight: 600;
+	text-align: center;
+	display: inline;
+	float: right;
+	display: none;
+}
+
+/* Squat Modal 끝 */
+
+

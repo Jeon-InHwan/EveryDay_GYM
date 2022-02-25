@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.scit.gym.dao.BoardMapper">
+
+
+<!-- 자유게시판 글 작성 (insert) -->
+<insert id="writeFreeBoard" parameterType="Freeboard">
+INSERT INTO EVERYDAYGYM_FREEBOARD(
+	freeboard_num
+	, freeboard_title
+	, freeboard_context
+	, user_id
+)VALUES(
+	EVERYDAYGYM_FREEBOARD_SEQ.NEXTVAL
+	, #{freeboard_title}
+	, #{freeboard_context}
+	, #{user_id}
+)
+</insert>
+
+
+<!-- 자유게시판 글 목록 전부 가져오기 -->
+<select id="listFreeboard" resultType="Freeboard" parameterType="map">
+SELECT
+	freeboard_num
+	, freeboard_title
+	, freeboard_context
+	, freeboard_hits
+	, user_id
+	, TO_CHAR(freeboard_indate, 'YYYY-MM-DD') AS freeboard_indate
+FROM
+	EVERYDAYGYM_FREEBOARD
+WHERE
+	<choose>
+		<when test="searchItem == 'freeboard_title'">freeboard_title</when>
+		<when test="searchItem == 'user_id'">user_id</when>
+		<when test="searchItem == 'freeboard_context'">freeboard_context</when>
+	</choose>
+	LIKE '%' || #{searchWord} || '%'
+ORDER BY
+	freeboard_num DESC
+</select>
+
+
+<!-- 글 번호를 토대로 자유게시판 글 조회수 1 업데이트 -->
+<update id="updateHits" parameterType="int">
+UPDATE
+	EVERYDAYGYM_FREEBOARD
+SET
+	freeboard_hits = freeboard_hits + 1
+WHERE
+	freeboard_num = #{freeboard_num}
+</update>	
+
+
+<!-- Ajax를 활용하여 글 번호를 토대로 자유게시판 글 하나 가져오기 -->
+<select id="readFreeboard" parameterType="int" resultType="Freeboard">
+SELECT
+	freeboard_num
+	, freeboard_title
+	, freeboard_context
+	, freeboard_hits
+	, user_id
+	, freeboard_savedfile
+	, freeboard_originalfile
+	, TO_CHAR(freeboard_indate, 'YYYY-MM-DD') AS freeboard_indate
+FROM
+	EVERYDAYGYM_FREEBOARD
+WHERE
+	freeboard_num = #{freeboard_num}
+</select>
+
+
+<!-- Update one freeboard post using Ajax  -->
+<update id="updateFreeboard" parameterType="Freeboard">
+UPDATE
+	EVERYDAYGYM_FREEBOARD
+SET
+	freeboard_title = #{freeboard_title}
+	, freeboard_context = #{freeboard_context}
+	, freeboard_indate = SYSDATE
+WHERE
+	freeboard_num = #{freeboard_num}
+AND
+	(user_id = #{user_id} OR #{manager} = 1)
+</update>
+
+
+
+<!-- Delete one freeboard post using Ajax -->
+<delete id="deleteFreeboard" parameterType="Freeboard">
+DELETE FROM
+	EVERYDAYGYM_FREEBOARD
+WHERE
+	freeboard_num = #{freeboard_num}
+AND
+	(user_id = #{user_id} OR #{manager} = 1)
+</delete>
+
+
+
+<!-- 게시판 전체 글 개수 세어오기 -->
+<select id="selectTotalCount" resultType="int">
+SELECT
+	COUNT(*)
+FROM
+	EVERYDAYGYM_FREEBOARD
+WHERE
+	<choose>
+		<when test="searchItem == 'freeboard_title'">freeboard_title</when>
+		<when test="searchItem == 'user_id'">user_id</when>
+		<when test="searchItem == 'freeboard_context'">freeboard_context</when>
+	</choose>
+LIKE '%' || #{searchWord} || '%'
+</select>
+
+
+</mapper>

@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+* {
+	font-family: "M PLUS Rounded 1c"; 
+}
+
+
+#outWrapper {
+	width: 500px;
+	margin: 0 auto;
+	opacity: 1;
+	text-align: center;
+	margin-top: 150px;
+	vertical-align: middle;
+}
+
+#dropdownId {
+	display: inline;
+	float: right;
+}
+
+div#picture {
+	opacity: 0.8;
+  	display: block;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	height: 100vh;
+	width : 100vw;
+	background-image: url("/resources/images/home_workout1.jpg");
+	background-size:cover;
+	z-index: -1;
+}
+
+#cardWrapper {
+	width: auto;
+	text-align: center;
+	padding: 0;
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+#card1 {
+	width: 250px;
+	height: 370px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-right: 55px;
+}
+
+#card2 {
+	width: 250px;
+	height: 370px;
+	text-align: center;
+	border: 2px solid white;
+	display: inline-block;
+	margin-left: 55px;
+}
+
+
+#card1 .card-body a {
+	margin-top: 15px;
+	width: 120px;
+	font-weight: 600;
+}
+
+#card2 .card-body a {
+	margin-top: 15px;
+	width: 120px;
+	font-weight: 600;
+}
+
+#card1 img {
+	width: 284px;
+	height: 190px;
+}
+
+#card2 img {
+	width: 284px;
+	height: 190px;
+}
+
+
+
+/* nav 관련 css 시작 */
+
+li#firstLi {
+	margin-left: 70px;
+}
+
+li {
+	margin-left: 30px;
+}
+
+
+#firstUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#firstUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#secondUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#thirdUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+#fourthUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#fourthUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+
+/* nav 관련 css 종료 */
+
+
+#userUl li {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#userUl li a.dropdown-item {
+	width: 160px;
+	margin: 0 auto;
+}
+
+#carouselExampleCaptions {
+	border: 2px solid white;
+	width: 800px;
+	height: 470px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.carousel-item img {
+	width: 804px;
+	height: 466px;
+}
+
+
+.carousel-caption.d-none.d-md-block h5, .carousel-caption.d-none.d-md-block p {
+	color: white;
+	font-weight: 600;
+	background-color: black;
+	width: 100%;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.carousel-caption.d-none.d-md-block p {
+	margin-bottom: 10px;
+}
+
+.card-body h5, .card-body p {
+	font-weight: 600;
+}
+
+
+#modalTrigger1 {
+	display: none;
+} 
+
+#modalTrigger2 {
+	display: none;
+} 
+
+
+
+#exampleModalLabel {
+	background-color: #212529;
+	color: white;
+	font-weight: 800; 
+	margin-left: 5px;
+}
+
+#forTitleColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#forTitleUpperColor {
+	background-color: #212529;
+	margin: 0px;
+}
+
+#exampleModal {
+	margin: 0px;
+}
+
+#innerContent1 {
+	text-align: center;
+}
+
+#innerContent2 {
+	text-align: center;
+}
+
+

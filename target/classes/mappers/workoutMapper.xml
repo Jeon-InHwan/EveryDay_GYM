@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.scit.gym.dao.WorkoutMapper">
+
+
+<!-- workout 기록 작성 (insert) -->
+<insert id="inputWorkouts" parameterType="Workout">
+INSERT INTO EVERYDAYGYM_WORKOUT(
+	workout_num
+	, workout_type
+	, workout_kg
+	, workout_counts
+	, workout_setvolume
+	, user_id
+)VALUES(
+	EVERYDAYGYM_WORKOUT_SEQ.NEXTVAL
+	, #{workout_type}
+	, #{workout_kg}
+	, #{workout_counts}
+	, #{workout_setvolume}
+	, #{user_id}
+)
+</insert>
+
+
+<!-- user_id와 workout_type을 기반으로 workout 기록을 요청 (SELECT) -->
+<select id="showWorkouts" parameterType="Workout" resultType="Workout">
+SELECT
+	workout_num
+	, workout_type
+	, workout_kg
+	, workout_counts
+	, workout_setvolume
+	, user_id
+	, TO_CHAR(workout_indate, 'YYYY-MM-DD') AS workout_indate
+FROM 
+	EVERYDAYGYM_WORKOUT
+WHERE 
+	user_id = #{user_id}
+AND
+	workout_type = #{workout_type}
+AND
+	TO_CHAR(workout_indate, 'YYYY-MM-DD') = TO_CHAR(SYSDATE, 'YYYY-MM-DD')
+ORDER BY
+	workout_num DESC
+</select>
+
+
+<!-- workout_num을 기반으로 오늘의 운동 기록 삭제 요청 -->
+<delete id="deleteWorkouts" parameterType="Workout">
+DELETE FROM
+	EVERYDAYGYM_WORKOUT
+WHERE
+	workout_num = #{workout_num}
+AND
+	user_id = #{user_id}
+</delete>
+
+
+<!-- user_id를 기반으로, 모든 운동 기록을 가져오는 요청 -->
+<select id="getAllWorkouts" parameterType="map" resultType="Workout">
+SELECT
+	workout_num
+	, workout_type
+	, workout_kg
+	, workout_counts
+	, workout_setvolume
+	, user_id
+	, TO_CHAR(workout_indate, 'YYYY-MM-DD') AS workout_indate
+FROM 
+	EVERYDAYGYM_WORKOUT
+WHERE 
+	user_id = #{user_id}
+<if test="workout_type != ''">
+	AND workout_type = #{workout_type}
+</if>
+<if test="workout_indate != ''">
+	AND TO_CHAR(workout_indate, 'YYYY-MM-DD') = #{workout_indate}
+</if>
+ORDER BY
+	workout_indate DESC
+	, workout_type
+</select>
+
+
+<!-- 한 유저의 전체 운동기록 개수 세어오기 -->
+<select id="selectTotalWorkoutCount" parameterType="map" resultType="int">
+SELECT
+	COUNT(*)
+FROM
+	EVERYDAYGYM_WORKOUT
+WHERE
+	<if test="workout_type != ''">
+		workout_type = #{workout_type}
+	</if>
+	<if test="workout_type == ''">
+		workout_type LIKE '%' || #{workout_type} || '%'
+	</if>
+	<if test="workout_indate != ''">
+		AND TO_CHAR(workout_indate, 'YYYY-MM-DD') = #{workout_indate}
+	</if>
+	<if test="workout_type == ''">
+		AND TO_CHAR(workout_indate, 'YYYY-MM-DD') LIKE '%' || #{workout_indate} || '%'
+	</if>
+AND
+	user_id = #{user_id}
+</select>
+
+
+
+</mapper>
